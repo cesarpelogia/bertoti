@@ -12,7 +12,7 @@ Engenharia de software é uma área da programação que atua no desenvolvimento
   
 - Trade-offs: A engenharia de software envolve trade-offs, onde otimizar um aspecto pode resultar em compromissos em outros. Decisões são tomadas visando desempenho versus consumo de recursos ou velocidade de desenvolvimento versus qualidade do código exigem equilíbrio e compreensão das prioridades do projeto.
 
-
+----------------------------------------------------
 
 # Atividade 2:
 
@@ -61,6 +61,22 @@ Pro Tools
   - Plugins Nativos de maior qualidade
   - Alto consumo de hardware
 
+------------------------------------------------------
+
 # Atividade 3:
 
+https://docs.google.com/presentation/d/1Lmad2CS1pM1UycQpYn6FiDm2NsEO6CVSchym65tuk4U/edit?pli=1#slide=id.g1f2b4e971a0_0_179
 
+Slide:
+
+24 - 
+
+25 -
+
+26 -
+
+27 -
+
+28 -
+
+29 -
