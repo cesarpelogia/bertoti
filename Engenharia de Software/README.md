@@ -92,21 +92,21 @@ Slide:
   Poderia ser utilizado em um software de gravação de áudio, onde o sistema faria o tratamento de audio simples e efeitos seriam adicionados via plug-in,
   como já acontece em varias daw's
 
-### 27 -
+### 27 - Service-Based Architecture Style
 
  - Positivo: Tolerância a falhas
  - Negativo: Elasticidade
 
   Ideal para site de vendas, pois se uma parte do sistema falha, o restante continua funcionando.
 
-### 28 -
+### 28 - Event-Driven Architecture Style
 
  - Positivo: Escalabilidade
  - Negativo: Simplicidade
 
   Poderia ser usado em um sistema para distribuição de tarefas.
 
-### 29 -
+### 29  Microservices Architecture
 
  - Positivo: Escalabilidade  
  - Negativo: Simplicidade
