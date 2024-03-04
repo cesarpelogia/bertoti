@@ -104,7 +104,7 @@ Slide:
  - Positivo: Escalabilidade
  - Negativo: Simplicidade
 
-  Poderia ser usado em um sistema para distribuição de tarefas.
+  Poderia ser usado em um sistema de logística e vendas, visando integração de vários sistemas.
 
 ### 29  Microservices Architecture
 
