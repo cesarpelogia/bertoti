@@ -112,3 +112,11 @@ Slide:
  - Negativo: Simplicidade
 
   Pode ser usado em uma plataforma de streaming
+
+# Atividade 4
+
+### Avaliar a Arquitetura do Slide 17 " Projeto da Arquitetura do Sistema (Diagrama de Classes UML)
+
+
+
+
