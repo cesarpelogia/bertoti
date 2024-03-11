@@ -113,10 +113,42 @@ Slide:
 
   Pode ser usado em uma plataforma de streaming
 
+  
+
 # Atividade 4
 
-### Avaliar a Arquitetura do Slide 17 " Projeto da Arquitetura do Sistema (Diagrama de Classes UML)
+### Defina sua arquitetura debatendo tradeoffs com os requisitos não funcionais comentados em aula
 
+Sistema escolhido: "Layered Architecture Style"
 
+  Sistema escolhido devivo a simplicidade e ao baixo custo. Sistema será usado em uma pequena mercearia.
 
+# Atividade 5
 
+### Inicie seu diagrama de classes de uma das partes da arquitetura (escolha uma parte de backend por favor)
+
+#### Estoque:
+
+- comida: List <Comida>
+- bebida: List <Bebida>
+
++cadastrarComida (Comida comida);
++cadastrarBebida (Bebida bebida);
++buscarComida (Comida comida): List <Comida>
++buscarBebida: (Bebida bebida): Lista <Bebida>
+
+#### Comida
+
+- marcaComida: String
+- quantidadeComida: String
+
+ +getMarcaComida (): String
+ +getQuantidadeComida (): int
+
+#### Bebida
+
+- marcaBebida: String
+- quantidadeBebida: String
+
+ +getMarcaComida (): String
+ +getQuantidadeComida (): int
