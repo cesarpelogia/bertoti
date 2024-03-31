@@ -127,28 +127,5 @@ Sistema escolhido: "Layered Architecture Style"
 
 ### Inicie seu diagrama de classes de uma das partes da arquitetura (escolha uma parte de backend por favor)
 
-#### Estoque:
+![Diagrama de Classes](Engenharia de Software/Classe UML.jpeg)
 
-- comida: List <Comida>
-- bebida: List <Bebida>
-
-+cadastrarComida (Comida comida);
-+cadastrarBebida (Bebida bebida);
-+buscarComida (Comida comida): List <Comida>
-+buscarBebida: (Bebida bebida): Lista <Bebida>
-
-#### Comida
-
-- marcaComida: String
-- quantidadeComida: String
-
- +getMarcaComida (): String
- +getQuantidadeComida (): int
-
-#### Bebida
-
-- marcaBebida: String
-- quantidadeBebida: String
-
- +getMarcaComida (): String
- +getQuantidadeComida (): int
