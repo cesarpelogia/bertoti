@@ -127,5 +127,5 @@ Sistema escolhido: "Layered Architecture Style"
 
 ### Inicie seu diagrama de classes de uma das partes da arquitetura (escolha uma parte de backend por favor)
 
-[Diagrama de Classes](Engenharia de Software/Classe UML.jpeg)
+# <p align = "center"> ![Diagrama de Classes](https://github.com/cesarpelogia/bertoti/blob/455139aac249c40588d7e8e716aabe28b50ed32a/Engenharia%20de%20Software/Classe%20UML.jpeg)
 
