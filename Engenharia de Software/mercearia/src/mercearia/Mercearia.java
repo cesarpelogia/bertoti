@@ -12,7 +12,6 @@ public class Mercearia {
     public void cadastrarComida(Comida novaComida) {
         comidas.add(novaComida);
     }
-
     public void cadastrarBebida(Bebida novaBebida) {
         bebidas.add(novaBebida);
     }
