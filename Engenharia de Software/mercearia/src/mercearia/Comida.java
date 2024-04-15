@@ -2,31 +2,20 @@ package mercearia;
 
 public class Comida {
     // Atributos
-    private String tipoComida;
-    private String marcaComida;
-    private int quantidadeComida;
+    private String nome;
 
-    // Metodos de acesso Get
-    public String getTipoComida() {
-        return tipoComida;
+    public Comida(String nome){
+        this.nome = nome;
     }
+       
+	public String getNome() {
+		return nome;
+	}
 
-    public String getMarcaComida() {
-        return marcaComida;
+	public void setNome(String nome) {
+		this.nome = nome;
     }
-
-    public int getQuantidadeComida() {
-        return quantidadeComida;
-    }
-
-    // Metodos de acesso Set
-    public void setTipoComida(String tipoComida) {
-        this.tipoComida = tipoComida;
-    }
-
-    public void setMarcaComida(String marcaComida) {
-        this.marcaComida = marcaComida;
-    }
+}
 
     public void setQuantidadeComida(int quantidadeComida) {
         this.quantidadeComida = quantidadeComida;
