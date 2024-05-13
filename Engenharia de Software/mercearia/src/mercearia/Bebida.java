@@ -3,24 +3,31 @@ package mercearia;
 public class Bebida {
     
     // Atributos
-    private String nome;
+    private String nomeBebida;
+    private String tipoBebida;
+    private String marcaBebida;
+    private int qntdBebida;
  
-
-    public Bebida(String nome){
-        this.nome = nome;
+    public Bebida(String nomeBebida, String tipoBebida, String marcaBebida, int qntdBebida){
+        this.nomeBebida = nomeBebida;
+        this.tipoBebida = tipoBebida;
+        this.marcaBebida = marcaBebida;
+        this.qntdBebida = qntdBebida;    
     }
        
-	public String getNome() {
-		return nome;
-	}
+    // Metodo Acesso nomeBebida
+	public String getnomeBebida() {return nomeBebida;}
+	public void setnomeBebida(String nomeBebida) {this.nomeBebida = nomeBebida;}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    // Metodo Acesso tipoBebida Bebida
+    public String gettipoBebida() {return this.tipoBebida;}
+    public void settipoBebida(String tipoBebida) {this.tipoBebida = tipoBebida;}
 
-}
+    // Metodo Acesso marcaBebida Bebida
+    public String getmarcaBebida() {return marcaBebida;}
+    public void setmarcaBebida(String marcaBebida) {this.marcaBebida = marcaBebida;}
 
-    public void setQuantidadeBebida(int quantidadeBebida) {
-        this.quantidadeBebida = quantidadeBebida;
-    }
+    // Metodo Acesso Quantidade Bebida
+    public int getQuantidade() {return qntdBebida;}
+    public void setQuantidade(int qntdBebida) {this.qntdBebida = qntdBebida;}
 }
