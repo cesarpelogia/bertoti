@@ -5,42 +5,35 @@ import java.util.List;
 
 public class Mercearia {
 
-    private List<Comida> comidas = new LinkedList<Comida>();
-    private List<Bebida> bebidas = new LinkedList<Bebida>();
+    public List<Comida> comidas = new LinkedList<>();
+    public List<Bebida> bebidas = new LinkedList<>();
 
-    // Cadastrando Itens
-    public void cadastrarComida(Comida novaComida) {
-        comidas.add(novaComida);
+        // Cadastrando Itens
+    public void cadastrarComida(String nomeComida, String tipoComida, String marcaComida, int qntdComida) {
+        Comida comida = new Comida(nomeComida, tipoComida, marcaComida, qntdComida);
+        comidas.add(comida);
     }
-    public void cadastrarBebida(Bebida novaBebida) {
-        bebidas.add(novaBebida);
+    public void cadastrarBebida(String nomeBebida, String tipoBebida, String marcaBebida, int qntdBebida) {
+        Bebida bebida = new Bebida(nomeBebida, tipoBebida, marcaBebida, qntdBebida);
+        bebidas.add(bebida);
     }
 
-    // Buscando Itens
-    public List<Comida> buscaComidaPorTipo(String tipoComida) {
-        List<Comida> comidaEncontrada = new LinkedList<Comida>();
-        for (Comida comida : comidas) {
-            if (comida.getTipoComida().equals(tipoComida))
-                comidaEncontrada.add(comida);
+        // Metodo Buscar Comida
+    public void buscarComida(String nomeComida) {
+        for(Comida comida : comidas){
+            if (comida.getnomeComida().equalsIgnoreCase(nomeComida)){
+                return ;
+            }
         }
-        return comidaEncontrada;
     }
-
-    public List<Bebida> buscaBebidaPorTipo(String tipoBebida) {
-        List<Bebida> bebidaEncontrada = new LinkedList<Bebida>();
-        for (Bebida bebida : bebidas) {
-            if (bebida.getTipoBebida().equals(tipoBebida))
-                bebidaEncontrada.add(bebida);
+    
+        // Metodo Buscar Bebida
+    public void buscarBebida(String nomeBebida){
+        for(Bebida bebida : bebidas){
+            if (bebida.getnomeBebida().equalsIgnoreCase(nomeBebida)) {
+                return ;
+            }
         }
-        return bebidaEncontrada;
-    }
 
-    public List<Comida> getTipoComida() {
-        return comidas;
     }
-
-    public List<Bebida> getTipoBebida() {
-        return bebidas;
-    }
-
 }
