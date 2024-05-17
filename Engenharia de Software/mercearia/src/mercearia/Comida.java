@@ -30,5 +30,4 @@ public class Comida {
     // Metodo Acesso Quantidade Comida
     public int getQuantidade() {return qntdComida;}
     public void setQuantidade(int qntdComida) {this.qntdComida = qntdComida;}
-
 }
