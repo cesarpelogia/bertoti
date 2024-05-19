@@ -14,11 +14,11 @@ public class Comida {
         this.marcaComida = marcaComida;
         this.qntdComida = qntdComida;
     }
-       
+    
     // Metodo Acesso nomeComida
 	public String getnomeComida() {return nomeComida;}
 	public void setnomeComida(String nomeComida) {this.nomeComida = nomeComida;}
-
+    
     // Metodo Acesso tipoComida Comida
     public String gettipoComida() {return this.tipoComida;}
     public void settipoComida(String tipoComida) {this.tipoComida = tipoComida;}

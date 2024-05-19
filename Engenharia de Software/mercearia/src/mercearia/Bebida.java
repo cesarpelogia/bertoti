@@ -12,7 +12,7 @@
             this.nomeBebida = nomeBebida;
             this.tipoBebida = tipoBebida;
             this.marcaBebida = marcaBebida;
-            this.qntdBebida = qntdBebida;    
+            this.qntdBebida = qntdBebida;
         }
         
         // Metodo Acesso nomeBebida
@@ -20,7 +20,7 @@
         public void setnomeBebida(String nomeBebida) {this.nomeBebida = nomeBebida;}
 
         // Metodo Acesso tipoBebida Bebida
-        public String gettipoBebida() {return this.tipoBebida;}
+        public String gettipoBebida() {return tipoBebida;}
         public void settipoBebida(String tipoBebida) {this.tipoBebida = tipoBebida;}
 
         // Metodo Acesso marcaBebida Bebida

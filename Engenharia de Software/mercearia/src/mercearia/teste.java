@@ -1,27 +1,45 @@
 package mercearia;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class teste {
+public class Teste {
 
-    Mercearia cassio = new Mercearia();
+    Mercearia mercadinho = new Mercearia();
     
     @Test
     public void testeCadastrarComida(){
-        cassio.cadastrarComida("Macarrão", "Massa", "Renata", 3000);
-        cassio.cadastrarComida("Lasanha", "Massa", "Perdigão", 1000);
+        mercadinho.cadastrarComida("Macarrão", "Massa", "Renata", 3000);
+        mercadinho.cadastrarComida("Lasanha", "Massa", "Perdigão", 1000);
 
-        assertTrue(cassio.comidas.getLast().getnomeComida() == "Lasanha");
+        assertTrue(mercadinho.comidas.getLast().getnomeComida().equals("Lasanha"));
     }
 
     @Test
     public void testeCadastrarBebida(){
-        cassio.cadastrarBebida("Vinho", "Merlot", "Danny", 3500);
-        cassio.cadastrarBebida("Cerveja", "Pilsen", "Brahma", 350);
+        mercadinho.cadastrarBebida("Vinho", "Merlot", "Danny", 3500);
+        mercadinho.cadastrarBebida("Cerveja", "Pilsen", "Brahma", 350);
         
-        assertFalse(cassio.bebidas.getFirst().gettipoBebida() == "Pilsen");
-    }   
+        assertFalse(mercadinho.bebidas.getFirst().getnomeBebida().equals("Vinho"));
+    }
+
+    @Test
+    public void testeBuscarComida(){
+        mercadinho.cadastrarComida("Macarrão", "Massa", "Renata", 3000);
+        mercadinho.cadastrarComida("Lasanha", "Massa", "Perdigão", 1000);
+        mercadinho.buscarComida("Lasanha");
+        
+        assertEquals("Lasanha", mercadinho.buscarComida("Lasanha").getnomeComida());
+
+    }
+
+    @Test
+    public void testeBuscarBebida(){
+        mercadinho.cadastrarBebida("Vinho", "Merlot", "Danny", 3500);
+        mercadinho.cadastrarBebida("Cerveja", "Pilsen", "Brahma", 350);
+        mercadinho.buscarBebida("Cerveja");
+        
+        assertEquals("Cerveja", mercadinho.buscarBebida("Cerveja").getnomeBebida());
+    }
 }

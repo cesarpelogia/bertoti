@@ -13,27 +13,34 @@ public class Mercearia {
         Comida comida = new Comida(nomeComida, tipoComida, marcaComida, qntdComida);
         comidas.add(comida);
     }
-    public void cadastrarBebida(String nomeBebida, String tipoBebida, String marcaBebida, int qntdBebida) {
+    public boolean cadastrarBebida(String nomeBebida, String tipoBebida, String marcaBebida, int qntdBebida) {
         Bebida bebida = new Bebida(nomeBebida, tipoBebida, marcaBebida, qntdBebida);
         bebidas.add(bebida);
+        System.out.println(nomeBebida + " adicionada!");
+        return true;
     }
 
         // Metodo Buscar Comida
-    public void buscarComida(String nomeComida) {
+    public Comida buscarComida(String nomeComida) {
         for(Comida comida : comidas){
             if (comida.getnomeComida().equalsIgnoreCase(nomeComida)){
-                return ;
+                System.out.println(comida + " encontrada!");
+                return comida;
             }
         }
+        System.out.println("Comida não encontrada!");
+        return null;
     }
     
         // Metodo Buscar Bebida
-    public void buscarBebida(String nomeBebida){
+    public Bebida buscarBebida(String nomeBebida){
         for(Bebida bebida : bebidas){
             if (bebida.getnomeBebida().equalsIgnoreCase(nomeBebida)) {
-                return ;
+                System.out.println(bebida + " encontrada!");
+                return bebida;
             }
         }
-
+        System.out.println("Bebida não encontrada!");
+        return null;
     }
 }
