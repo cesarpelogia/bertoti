@@ -71,15 +71,19 @@ Slide:
 
 ### 24 - Estilo de Arquitetura em Camadas:
 
- - Positivo: Custo 
+ - Positivo: Custo.
+     A simplicidade de um projeto que utiliza o estilo de arquitetura em camadas, diminui o custo de construção do projeto. A divisão em camadas e a separação clara das funções facilitada a manutenção do sistema. Essas características também facilitam a construção de testes para validar as funções do sistema.
+   
  - Negativo: Escalabilidade
-
+     Em contraponto a vantagem do custo, a simplicidade se mostra prejudicial, pois cada camada exige uma quantidade de desempenho computacional, devido a alta passagem de dados e isso pode sobrecarregar o sistema e impactar a performance de um sistema em grande escala. Expandir um sistema em camadas também pode exigir o aumento da necessidade de hardware, indo contra a positivdade citada acima.
+   
   Poderia ser utilizado para um sistema de um pequeno comercio, onde os itens são limitados.  
 
 
 ### 25 - Estilo de Arquitetura de Pipeline
 
  - Positivo: Simplicidade
+    
  - Negativo: Elasticidade
 
   Poderia ser utilizado em um sistema que só alimenta um banco de dados, como por exemplo um cadastro de usuários de um sistema.
