@@ -72,21 +72,42 @@ Slide:
 ### 24 - Estilo de Arquitetura em Camadas:
 
  - Positivo: Custo.
-     A simplicidade de um projeto que utiliza o estilo de arquitetura em camadas, diminui o custo de construção do projeto. A divisão em camadas e a separação clara das funções facilitada a manutenção do sistema. Essas características também facilitam a construção de testes para validar as funções do sistema.
    
+     A simplicidade inerente ao estilo de arquitetura em camadas reduz significativamente o custo de construção do projeto.
+A clara separação de responsabilidades entre as diferentes camadas facilita tanto o desenvolvimento quanto a                manutenção do sistema. Essa divisão modular permite que desenvolvedores trabalhem em componentes específicos sem            interferir nos outros, acelerando o processo de desenvolvimento e diminuindo a complexidade.
+
+     Além disso, essa arquitetura facilita a construção de testes, pois cada camada pode ser testada de maneira             independente. Isso resulta em uma detecção mais rápida de bugs e problemas, contribuindo para uma manutenção mais           eficiente e menos onerosa ao longo do ciclo de vida do software.
+
  - Negativo: Escalabilidade
-     Em contraponto a vantagem do custo, a simplicidade se mostra prejudicial, pois cada camada exige uma quantidade de desempenho computacional, devido a alta passagem de dados e isso pode sobrecarregar o sistema e impactar a performance de um sistema em grande escala. Expandir um sistema em camadas também pode exigir o aumento da necessidade de hardware, indo contra a positivdade citada acima.
    
-  Poderia ser utilizado para um sistema de um pequeno comercio, onde os itens são limitados.  
+     Apesar das vantagens de custo, a simplicidade do estilo de arquitetura em camadas pode ser prejudicial em termos de escalabilidade. Cada camada adiciona uma quantidade significativa de processamento e comunicação de dados, o que pode       sobrecarregar o sistema e impactar a performance, especialmente em sistemas de grande escala.
+
+     Quando um sistema cresce e precisa processar um volume maior de dados, a arquitetura em camadas pode se tornar um gargalo. A necessidade de maior desempenho pode levar ao aumento dos recursos de hardware, o que contraria a vantagem       de custo inicialmente mencionada. Esse aumento na necessidade de hardware e processamento pode tornar a escalabilidade      vertical (aumento de capacidade do servidor) limitada e cara.
+
+ - Aplicação:
+
+     A arquitetura em camadas é adequada para sistemas de pequeno porte, como os de um pequeno comércio. Nesses casos, o número de itens e transações é limitado, não exigindo uma grande capacidade de processamento e permitindo que a             simplicidade e a facilidade de manutenção superem os desafios de escalabilidade.
 
 
 ### 25 - Estilo de Arquitetura de Pipeline
 
  - Positivo: Simplicidade
+   
+     A arquitetura de pipeline é conhecida por sua simplicidade e clareza na organização do fluxo de dados. Cada etapa do pipeline tem uma função específica e bem definida, o que facilita o desenvolvimento e a manutenção do sistema. Essa         modularidade permite que cada componente do pipeline seja desenvolvido, testado e depurado de maneira independente,         simplificando o gerenciamento e a integração do sistema como um todo.
+
+      Além disso, a natureza sequencial do pipeline torna mais fácil entender e seguir o fluxo de processamento dos dados.  Novos desenvolvedores podem rapidamente se familiarizar com o sistema, pois cada etapa é um bloco de construção             lógico e isolado. Isso resulta em um ciclo de desenvolvimento mais ágil e uma curva de aprendizado menor.
     
  - Negativo: Elasticidade
 
-  Poderia ser utilizado em um sistema que só alimenta um banco de dados, como por exemplo um cadastro de usuários de um sistema.
+     Por outro lado, a arquitetura de pipeline pode enfrentar desafios em termos de elasticidade, especialmente quando há variações significativas na carga de trabalho. Cada estágio do pipeline pode se tornar um ponto de gargalo, e a             necessidade de balancear a carga entre as etapas pode complicar a escalabilidade.
+
+     A elasticidade refere-se à capacidade do sistema de se ajustar dinamicamente à carga de trabalho. Em um pipeline, se
+uma etapa específica enfrenta uma sobrecarga, ela pode atrasar o processamento de todo o fluxo, pois as etapas são          dependentes umas das outras. Gerenciar essa elasticidade requer uma coordenação cuidadosa e, muitas vezes, soluções         adicionais de balanceamento de carga e paralelização, o que pode aumentar a complexidade e o custo operacional.
+
+   - Aplicação:
+
+     A arquitetura de pipeline é adequada para sistemas que realizam operações sequenciais de processamento de dados, como um sistema de cadastro de usuários. Neste exemplo, as etapas podem incluir a validação dos dados de entrada, a formatação das informações, a verificação de duplicatas, e a inserção dos dados no banco de dados. Cada etapa processa os dados e os passa para a próxima, garantindo um fluxo organizado e eficiente.
+
 
 ### 26 - Microkernel Architecture Style
 
