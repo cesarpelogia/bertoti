@@ -104,7 +104,7 @@ A clara separação de responsabilidades entre as diferentes camadas facilita ta
      A elasticidade refere-se à capacidade do sistema de se ajustar dinamicamente à carga de trabalho. Em um pipeline, se
 uma etapa específica enfrenta uma sobrecarga, ela pode atrasar o processamento de todo o fluxo, pois as etapas são          dependentes umas das outras. Gerenciar essa elasticidade requer uma coordenação cuidadosa e, muitas vezes, soluções         adicionais de balanceamento de carga e paralelização, o que pode aumentar a complexidade e o custo operacional.
 
-   - Aplicação:
+  - Aplicação:
 
      A arquitetura de pipeline é adequada para sistemas que realizam operações sequenciais de processamento de dados, como um sistema de cadastro de usuários. Neste exemplo, as etapas podem incluir a validação dos dados de entrada, a formatação das informações, a verificação de duplicatas, e a inserção dos dados no banco de dados. Cada etapa processa os dados e os passa para a próxima, garantindo um fluxo organizado e eficiente.
 
@@ -112,10 +112,23 @@ uma etapa específica enfrenta uma sobrecarga, ela pode atrasar o processamento 
 ### 26 - Microkernel Architecture Style
 
  - Positivo: Simplicidade.
+
+   A arquitetura microkernel é valorizada por sua simplicidade estrutural e modularidade. No núcleo (kernel) do sistema reside apenas a funcionalidade essencial e mínima necessária para operar. Funcionalidades adicionais e extensões são implementadas como plug-ins ou módulos externos que interagem com o kernel.
+
+Essa separação clara entre o núcleo básico e os módulos permite um desenvolvimento e uma manutenção mais simples e flexível. Cada módulo ou plug-in pode ser desenvolvido, atualizado, e mantido independentemente do núcleo e dos outros módulos. Isso facilita a adição de novas funcionalidades sem a necessidade de alterar a base do sistema, promovendo uma rápida evolução e adaptabilidade do software.
+
  - Negativo: Tolerância a falhas.
 
-  Poderia ser utilizado em um software de gravação de áudio, onde o sistema faria o tratamento de audio simples e efeitos seriam adicionados via plug-in,
-  como já acontece em varias daw's
+   Uma das principais desvantagens da arquitetura microkernel é a sua tolerância a falhas. Como o núcleo do sistema é responsável pela coordenação e comunicação entre todos os módulos, qualquer falha ou erro no kernel pode comprometer todo o sistema. Além disso, a dependência de múltiplos módulos pode introduzir complexidade na gestão de falhas, pois uma falha em um módulo pode potencialmente afetar outros módulos ou o próprio kernel.
+
+A integração e a intercomunicação entre os módulos e o kernel precisam ser cuidadosamente gerenciadas para evitar que falhas isoladas se propaguem pelo sistema. Isso pode requerer estratégias adicionais de isolamento de falhas e recuperação, aumentando a complexidade do sistema.
+
+ - Aplicação:
+
+   Uma das principais desvantagens da arquitetura microkernel é a sua tolerância a falhas. Como o núcleo do sistema é responsável pela coordenação e comunicação entre todos os módulos, qualquer falha ou erro no kernel pode comprometer todo o sistema. Além disso, a dependência de múltiplos módulos pode introduzir complexidade na gestão de falhas, pois uma falha em um módulo pode potencialmente afetar outros módulos ou o próprio kernel.
+
+A integração e a intercomunicação entre os módulos e o kernel precisam ser cuidadosamente gerenciadas para evitar que falhas isoladas se propaguem pelo sistema. Isso pode requerer estratégias adicionais de isolamento de falhas e recuperação, aumentando a complexidade do sistema.
+
 
 ### 27 - Service-Based Architecture Style
 
