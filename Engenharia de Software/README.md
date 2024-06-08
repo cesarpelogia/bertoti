@@ -73,83 +73,114 @@ Slide:
 
  - Positivo: Custo.
    
-     A simplicidade inerente ao estilo de arquitetura em camadas reduz significativamente o custo de construção do projeto.
-A clara separação de responsabilidades entre as diferentes camadas facilita tanto o desenvolvimento quanto a                manutenção do sistema. Essa divisão modular permite que desenvolvedores trabalhem em componentes específicos sem            interferir nos outros, acelerando o processo de desenvolvimento e diminuindo a complexidade.
+     A simplicidade inerente ao estilo de arquitetura em camadas reduz significativamente o custo de construção do projeto. A clara separação de responsabilidades entre as diferentes camadas facilita tanto o desenvolvimento quanto a manutenção do sistema. Essa divisão modular permite que desenvolvedores trabalhem em componentes específicos sem interferir nos outros, acelerando o processo de desenvolvimento e diminuindo a complexidade.
 
-     Além disso, essa arquitetura facilita a construção de testes, pois cada camada pode ser testada de maneira             independente. Isso resulta em uma detecção mais rápida de bugs e problemas, contribuindo para uma manutenção mais           eficiente e menos onerosa ao longo do ciclo de vida do software.
+     Além disso, essa arquitetura facilita a construção de testes, pois cada camada pode ser testada de maneira independente. Isso resulta em uma detecção mais rápida de bugs e problemas, contribuindo para uma manutenção mais eficiente e menos onerosa ao longo do ciclo de vida do software.
 
  - Negativo: Escalabilidade
    
-     Apesar das vantagens de custo, a simplicidade do estilo de arquitetura em camadas pode ser prejudicial em termos de escalabilidade. Cada camada adiciona uma quantidade significativa de processamento e comunicação de dados, o que pode       sobrecarregar o sistema e impactar a performance, especialmente em sistemas de grande escala.
+     Apesar das vantagens de custo, a simplicidade do estilo de arquitetura em camadas pode ser prejudicial em termos de escalabilidade. Cada camada adiciona uma quantidade significativa de processamento e comunicação de dados, o que pode sobrecarregar o sistema e impactar a performance, especialmente em sistemas de grande escala.
 
-     Quando um sistema cresce e precisa processar um volume maior de dados, a arquitetura em camadas pode se tornar um gargalo. A necessidade de maior desempenho pode levar ao aumento dos recursos de hardware, o que contraria a vantagem       de custo inicialmente mencionada. Esse aumento na necessidade de hardware e processamento pode tornar a escalabilidade      vertical (aumento de capacidade do servidor) limitada e cara.
+     Quando um sistema cresce e precisa processar um volume maior de dados, a arquitetura em camadas pode se tornar um gargalo. A necessidade de maior desempenho pode levar ao aumento dos recursos de hardware, o que contraria a vantagem de custo inicialmente mencionada. Esse aumento na necessidade de hardware e processamento pode tornar a escalabilidade vertical (aumento de capacidade do servidor) limitada e cara.
 
  - Aplicação:
 
-     A arquitetura em camadas é adequada para sistemas de pequeno porte, como os de um pequeno comércio. Nesses casos, o número de itens e transações é limitado, não exigindo uma grande capacidade de processamento e permitindo que a             simplicidade e a facilidade de manutenção superem os desafios de escalabilidade.
+     A arquitetura em camadas é adequada para sistemas de pequeno porte, como os de um pequeno comércio. Nesses casos, o número de itens e transações é limitado, não exigindo uma grande capacidade de processamento e permitindo que a simplicidade e a facilidade de manutenção superem os desafios de escalabilidade.
 
 
 ### 25 - Estilo de Arquitetura de Pipeline
 
  - Positivo: Simplicidade
    
-     A arquitetura de pipeline é conhecida por sua simplicidade e clareza na organização do fluxo de dados. Cada etapa do pipeline tem uma função específica e bem definida, o que facilita o desenvolvimento e a manutenção do sistema. Essa         modularidade permite que cada componente do pipeline seja desenvolvido, testado e depurado de maneira independente,         simplificando o gerenciamento e a integração do sistema como um todo.
+  A arquitetura de pipeline é conhecida por sua simplicidade e clareza na organização do fluxo de dados. Cada etapa do pipeline tem uma função específica e bem definida, o que facilita o desenvolvimento e a manutenção do sistema. Essa modularidade permite que cada componente do pipeline seja desenvolvido, testado e depurado de maneira independente, simplificando o gerenciamento e a integração do sistema como um todo.
 
-      Além disso, a natureza sequencial do pipeline torna mais fácil entender e seguir o fluxo de processamento dos dados.  Novos desenvolvedores podem rapidamente se familiarizar com o sistema, pois cada etapa é um bloco de construção             lógico e isolado. Isso resulta em um ciclo de desenvolvimento mais ágil e uma curva de aprendizado menor.
+  Além disso, a natureza sequencial do pipeline torna mais fácil entender e seguir o fluxo de processamento dos dados.  Novos desenvolvedores podem rapidamente se familiarizar com o sistema, pois cada etapa é um bloco de construção lógico e isolado. Isso resulta em um ciclo de desenvolvimento mais ágil e uma curva de aprendizado menor.
     
  - Negativo: Elasticidade
 
-     Por outro lado, a arquitetura de pipeline pode enfrentar desafios em termos de elasticidade, especialmente quando há variações significativas na carga de trabalho. Cada estágio do pipeline pode se tornar um ponto de gargalo, e a             necessidade de balancear a carga entre as etapas pode complicar a escalabilidade.
+  Por outro lado, a arquitetura de pipeline pode enfrentar desafios em termos de elasticidade, especialmente quando há variações significativas na carga de trabalho. Cada estágio do pipeline pode se tornar um ponto de gargalo, e a necessidade de balancear a carga entre as etapas pode complicar a escalabilidade.
 
-     A elasticidade refere-se à capacidade do sistema de se ajustar dinamicamente à carga de trabalho. Em um pipeline, se
-uma etapa específica enfrenta uma sobrecarga, ela pode atrasar o processamento de todo o fluxo, pois as etapas são          dependentes umas das outras. Gerenciar essa elasticidade requer uma coordenação cuidadosa e, muitas vezes, soluções         adicionais de balanceamento de carga e paralelização, o que pode aumentar a complexidade e o custo operacional.
+  A elasticidade refere-se à capacidade do sistema de se ajustar dinamicamente à carga de trabalho. Em um pipeline, se uma etapa específica enfrenta uma sobrecarga, ela pode atrasar o processamento de todo o fluxo, pois as etapas são dependentes umas das outras. Gerenciar essa elasticidade requer uma coordenação cuidadosa e, muitas vezes, soluções adicionais de balanceamento de carga e paralelização, o que pode aumentar a complexidade e o custo operacional.
 
   - Aplicação:
 
-     A arquitetura de pipeline é adequada para sistemas que realizam operações sequenciais de processamento de dados, como um sistema de cadastro de usuários. Neste exemplo, as etapas podem incluir a validação dos dados de entrada, a formatação das informações, a verificação de duplicatas, e a inserção dos dados no banco de dados. Cada etapa processa os dados e os passa para a próxima, garantindo um fluxo organizado e eficiente.
+  A arquitetura de pipeline é adequada para sistemas que realizam operações sequenciais de processamento de dados, como um sistema de cadastro de usuários. Neste exemplo, as etapas podem incluir a validação dos dados de entrada, a formatação das informações, a verificação de duplicatas, e a inserção dos dados no banco de dados. Cada etapa processa os dados e os passa para a próxima, garantindo um fluxo organizado e eficiente.
 
 
 ### 26 - Microkernel Architecture Style
 
  - Positivo: Simplicidade.
 
-   A arquitetura microkernel é valorizada por sua simplicidade estrutural e modularidade. No núcleo (kernel) do sistema reside apenas a funcionalidade essencial e mínima necessária para operar. Funcionalidades adicionais e extensões são implementadas como plug-ins ou módulos externos que interagem com o kernel.
+  A arquitetura microkernel é valorizada por sua simplicidade estrutural e modularidade. No núcleo (kernel) do sistema reside apenas a funcionalidade essencial e mínima necessária para operar. Funcionalidades adicionais e extensões são implementadas como plug-ins ou módulos externos que interagem com o kernel.
 
-Essa separação clara entre o núcleo básico e os módulos permite um desenvolvimento e uma manutenção mais simples e flexível. Cada módulo ou plug-in pode ser desenvolvido, atualizado, e mantido independentemente do núcleo e dos outros módulos. Isso facilita a adição de novas funcionalidades sem a necessidade de alterar a base do sistema, promovendo uma rápida evolução e adaptabilidade do software.
+  Essa separação clara entre o núcleo básico e os módulos permite um desenvolvimento e uma manutenção mais simples e flexível. Cada módulo ou plug-in pode ser desenvolvido, atualizado, e mantido independentemente do núcleo e dos outros módulos. Isso facilita a adição de novas funcionalidades sem a necessidade de alterar a base do sistema, promovendo uma rápida evolução e adaptabilidade do software.
 
  - Negativo: Tolerância a falhas.
 
-   Uma das principais desvantagens da arquitetura microkernel é a sua tolerância a falhas. Como o núcleo do sistema é responsável pela coordenação e comunicação entre todos os módulos, qualquer falha ou erro no kernel pode comprometer todo o sistema. Além disso, a dependência de múltiplos módulos pode introduzir complexidade na gestão de falhas, pois uma falha em um módulo pode potencialmente afetar outros módulos ou o próprio kernel.
+  Uma das principais desvantagens da arquitetura microkernel é a sua tolerância a falhas. Como o núcleo do sistema é responsável pela coordenação e comunicação entre todos os módulos, qualquer falha ou erro no kernel pode comprometer todo o sistema. Além disso, a dependência de múltiplos módulos pode introduzir complexidade na gestão de falhas, pois uma falha em um módulo pode potencialmente afetar outros módulos ou o próprio kernel.
 
-A integração e a intercomunicação entre os módulos e o kernel precisam ser cuidadosamente gerenciadas para evitar que falhas isoladas se propaguem pelo sistema. Isso pode requerer estratégias adicionais de isolamento de falhas e recuperação, aumentando a complexidade do sistema.
+  A integração e a intercomunicação entre os módulos e o kernel precisam ser cuidadosamente gerenciadas para evitar que falhas isoladas se propaguem pelo sistema. Isso pode requerer estratégias adicionais de isolamento de falhas e recuperação, aumentando a complexidade do sistema.
 
  - Aplicação:
 
-   Uma das principais desvantagens da arquitetura microkernel é a sua tolerância a falhas. Como o núcleo do sistema é responsável pela coordenação e comunicação entre todos os módulos, qualquer falha ou erro no kernel pode comprometer todo o sistema. Além disso, a dependência de múltiplos módulos pode introduzir complexidade na gestão de falhas, pois uma falha em um módulo pode potencialmente afetar outros módulos ou o próprio kernel.
+  Uma das principais desvantagens da arquitetura microkernel é a sua tolerância a falhas. Como o núcleo do sistema é responsável pela coordenação e comunicação entre todos os módulos, qualquer falha ou erro no kernel pode comprometer todo o sistema. Além disso, a dependência de múltiplos módulos pode introduzir complexidade na gestão de falhas, pois uma falha em um módulo pode potencialmente afetar outros módulos ou o próprio kernel.
 
-A integração e a intercomunicação entre os módulos e o kernel precisam ser cuidadosamente gerenciadas para evitar que falhas isoladas se propaguem pelo sistema. Isso pode requerer estratégias adicionais de isolamento de falhas e recuperação, aumentando a complexidade do sistema.
+  A integração e a intercomunicação entre os módulos e o kernel precisam ser cuidadosamente gerenciadas para evitar que falhas isoladas se propaguem pelo sistema. Isso pode requerer estratégias adicionais de isolamento de falhas e recuperação, aumentando a complexidade do sistema.
 
 
 ### 27 - Service-Based Architecture Style
 
  - Positivo: Tolerância a falhas
+
+  A arquitetura baseada em serviços é altamente tolerante a falhas devido à sua estrutura modular e independente. Cada serviço opera de forma autônoma, com responsabilidades bem definidas, permitindo que o sistema continue funcionando mesmo se um serviço específico falhar. Por exemplo, em um site de vendas, se o serviço de processamento de pedidos tiver problemas, o serviço de exibição de produtos e o carrinho de compras ainda podem operar normalmente, minimizando o impacto negativo sobre a experiência do usuário.
+
+  Essa independência dos serviços aumenta a resiliência geral do sistema, já que as falhas podem ser isoladas e tratadas sem comprometer a totalidade da aplicação. Além disso, facilita a implementação de estratégias de recuperação de falhas, como reinicialização automática de serviços ou rerouting de solicitações para instâncias saudáveis
+  
  - Negativo: Elasticidade
 
-  Ideal para site de vendas, pois se uma parte do sistema falha, o restante continua funcionando.
+  No entanto, a arquitetura baseada em serviços pode enfrentar desafios significativos em termos de elasticidade. Elasticidade refere-se à capacidade do sistema de ajustar dinamicamente os recursos para atender às demandas variáveis. Na arquitetura baseada em serviços, cada serviço deve ser escalado de forma independente, o que pode ser complicado e exigir um gerenciamento sofisticado.
+
+  A comunicação entre serviços geralmente ocorre através de redes, o que pode introduzir latência e complexidade adicional. Coordenar a escalabilidade dos serviços para que eles funcionem harmoniosamente pode ser difícil, especialmente se alguns serviços demandarem mais recursos que outros em momentos específicos. Esse desafio pode resultar em custos operacionais mais altos e exigir ferramentas avançadas de monitoramento e orquestração para gerenciar eficientemente a elasticidade do sistema.
+
+  - Aplicação:
+
+  Ideal para site de vendas, com catálogo de produtos, processamento de pedidos, carrinhos de vendas pois se uma parte do sistema falha, o restante continua funcionando.
 
 ### 28 - Event-Driven Architecture Style
 
  - Positivo: Escalabilidade
+
+  A arquitetura orientada a eventos (Event-Driven Architecture) é altamente escalável devido à sua capacidade de processar eventos de forma assíncrona e distribuída. Nesse estilo arquitetônico, os componentes do sistema se comunicam através da emissão e consumo de eventos, permitindo um desacoplamento significativo entre os produtores e consumidores de eventos. Isso facilita a escalabilidade horizontal, pois novos consumidores podem ser adicionados conforme necessário para lidar com aumentos na carga de trabalho.
+
+  Além disso, a capacidade de processar eventos em paralelo e distribuir a carga de trabalho entre múltiplas instâncias contribui para a alta escalabilidade. Esse modelo é particularmente útil em sistemas que exigem respostas rápidas e processamento de grandes volumes de dados em tempo real, como um sistema de logística e vendas que precisa integrar múltiplos subsistemas, como inventário, entrega e processamento de pedidos.
+
  - Negativo: Simplicidade
+
+  Apesar de suas vantagens em termos de escalabilidade, a arquitetura orientada a eventos pode ser complexa de implementar e manter. A natureza assíncrona e distribuída dos eventos pode introduzir desafios significativos de coordenação, depuração e monitoramento. Garantir a consistência dos dados e a ordem correta dos eventos pode ser complicado, especialmente em sistemas distribuídos onde a latência de rede e as falhas de comunicação são comuns.
+
+  Além disso, a necessidade de gerenciar estados e eventos de forma robusta requer um planejamento cuidadoso e a implementação de mecanismos de recuperação de falhas, persistência de eventos e reprocessamento. Essa complexidade pode aumentar o tempo de desenvolvimento e os custos operacionais, exigindo uma equipe com habilidades especializadas em sistemas distribuídos e processamento assíncrono.
+
+  - Aplicação:
 
   Poderia ser usado em um sistema de logística e vendas, visando integração de vários sistemas.
 
 ### 29  Microservices Architecture
 
- - Positivo: Escalabilidade  
+ - Positivo: Escalabilidade
+
+  A arquitetura de microservices é altamente escalável devido à sua abordagem modular e descentralizada. Cada microservice é um componente independente que pode ser desenvolvido, implantado e escalado de forma autônoma. Isso permite que diferentes partes do sistema cresçam de acordo com suas necessidades específicas de carga e desempenho.
+
+  Por exemplo, em uma plataforma de streaming, serviços como gerenciamento de usuários, catálogo de conteúdo, recomendação de vídeos, e streaming de vídeo podem ser escalados individualmente. Se o serviço de streaming de vídeo enfrentar alta demanda, ele pode ser escalado horizontalmente (adicionando mais instâncias) sem impactar outros serviços. Essa capacidade de escalar componentes de forma independente melhora a eficiência e a resiliência do sistema, garantindo que ele possa suportar picos de tráfego e crescimento contínuo.
+
  - Negativo: Simplicidade
 
-  Pode ser usado em uma plataforma de streaming
+  Apesar de suas vantagens em escalabilidade, a arquitetura de microservices pode ser complexa de implementar e gerenciar. A decomposição de uma aplicação monolítica em vários microservices aumenta a quantidade de componentes que precisam ser coordenados. Cada microservice tem seu próprio ciclo de vida, armazenamento de dados, e comunicação, o que pode introduzir complexidade na gestão de dependências, latência de rede, e consistência de dados.
+
+  Além disso, implementar uma comunicação eficiente e segura entre microservices, lidar com falhas de rede, e garantir a observabilidade (monitoramento, logging, e tracing) são desafios significativos. A necessidade de ferramentas e práticas robustas para orquestração, como Kubernetes, bem como uma equipe com habilidades especializadas em sistemas distribuídos, pode aumentar a complexidade e os custos operacionais.
+
+  - Aplicação: 
+  
+  A arquitetura de microservices é ideal para uma plataforma de streaming, onde diferentes funcionalidades podem ser implementadas como serviços independentes, tais como: serviço de autenticação, serviço de catálogo de conteúdo, seriço de análise, entre outros.
 
   
 
@@ -165,5 +196,7 @@ Sistema escolhido: "Layered Architecture Style"
 
 ### Inicie seu diagrama de classes de uma das partes da arquitetura (escolha uma parte de backend por favor)
 
-# <p align = "center"> ![Diagrama de Classes](https://github.com/cesarpelogia/bertoti/blob/455139aac249c40588d7e8e716aabe28b50ed32a/Engenharia%20de%20Software/Classe%20UML.jpeg)
+<p align="center">
+  <img src="Engenharia de Software\Classe UML.jpeg" alt="Diagrama de Classes">
+</p>
 
