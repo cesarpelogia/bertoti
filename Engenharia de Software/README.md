@@ -16,36 +16,68 @@ Engenharia de software é uma área da programação que atua no desenvolvimento
 
 # Atividade 2:
 
-3 Exemplos de Trade-offs de Software:
+## 3 Exemplos de Trade-offs de Software:
 
-Premiere / After Effects
+### PostgreSQL / MongoDB
 
-Premiere: 
-  - Menor consumo de hardware
-  - Ferramentas mais convencionais de edição.
-  - Fluxo de trabalho mais flúido.
+#### PostgreSQL:
+  - Menor flexibilidade de esquema:
 
-Aftec Effects
-  - Maior consumo de Hardware
-  - Maior liberdade de manipulação.
-  - Edição de vídeos mais truncada.
+  PostgreSQL é um banco de dados relacional, o que significa que ele segue um esquema fixo para tabelas. Isso pode ser uma limitação em aplicações que exigem uma estrutura de dados mais dinâmica.
+
+  - Consultas SQL:
+
+  Oferece suporte completo a SQL, proporcionando consultas complexas e poderosas. Ideal para aplicações que necessitam de operações complexas de junção e transações.
+
+  - Escalabilidade de PostgreSQL:
+
+  PostgreSQL tradicionalmente escala verticalmente, adicionando mais recursos ao servidor existente para melhorar o desempenho. Soluções de escalabilidade horizontal, como sharding, são possíveis mas mais complexas de implementar e gerenciar. A escalabilidade vertical é mais simples, mas tem limites físicos de melhoria.
+
+#### MongoDB
+
+  - Maior flexibilidade de esquema:
+
+  Como um banco de dados NoSQL, MongoDB permite a inserção de documentos sem um esquema fixo, oferecendo grande flexibilidade para armazenar dados de diferentes formatos.
+
+  - Consultas menos complexas:
+
+  As consultas em MongoDB, usando sua linguagem de consulta baseada em JSON, são geralmente menos complexas e mais fáceis de escrever para operações simples e diretas.
+
+  - Escalabilidade de MongoDB:
+
+  MongoDB é projetado para escalar horizontalmente de forma nativa, distribuindo dados e operações entre vários servidores (shards). Isso facilita a expansão à medida que o volume de dados cresce, tornando MongoDB ideal para aplicações que necessitam lidar com grandes quantidades de dados e altos níveis de tráfego.
 
 -----------------------------------------------------
 
-Photoshop / Canva
+## Java / Python
 
-Photoshop
+#### Java
 
-  - Maior liberdade de ferramentas e manipulação.
-  - Banco de imagens pago.
-  - Manipula somente imagens.
-  - Assinatura com elevado preço.
+- Desempenho:
 
-Canva
-  - Menor liberdade de manipulação.
-  - Banco de imagens/vídeos gratuito.
-  - Manipula imagens e vídeos.
-  - Grátis ou com assinatura de baixo custo.
+Java é uma linguagem compilada para bytecode que roda na Java Virtual Machine (JVM), proporcionando desempenho geralmente superior e mais consistente em comparação com linguagens interpretadas. Isso faz de Java uma boa escolha para aplicações de alta performance.
+
+- Tipagem estática:
+
+Java usa tipagem estática, o que significa que os tipos de variáveis são definidos em tempo de compilação. Isso pode ajudar a evitar erros de tipo e tornar o código mais robusto, mas também pode tornar a escrita do código mais verbosa.
+
+- Escalabilidade:
+
+Java é amplamente utilizado em grandes sistemas de produção e é conhecido por sua capacidade de escalar bem, especialmente em aplicações corporativas e sistemas distribuídos.
+
+#### Python
+
+- Produtividade:
+
+Python é uma linguagem interpretada com sintaxe simples e direta, o que aumenta a produtividade dos desenvolvedores. É ideal para desenvolvimento rápido de protótipos e scripts.
+
+- Tipagem dinâmica:
+
+Python usa tipagem dinâmica, permitindo mais flexibilidade e simplicidade ao escrever código. No entanto, isso pode levar a erros de tipo que só são detectados em tempo de execução.
+
+- Escalabilidade:
+
+Embora Python possa ser usado em sistemas escaláveis, geralmente requer otimizações adicionais e o uso de bibliotecas externas para alcançar o desempenho e a escalabilidade que Java oferece nativamente. É mais comumente utilizado em soluções de back-end e microservices onde a escalabilidade pode ser gerenciada em partes menores do sistema.
 
 -------------------------------------------------------
 
@@ -197,6 +229,5 @@ Sistema escolhido: "Layered Architecture Style"
 ### Inicie seu diagrama de classes de uma das partes da arquitetura (escolha uma parte de backend por favor)
 
 <p align="center">
-  <img src="Engenharia de Software\Classe UML.jpeg" alt="Diagrama de Classes">
+  <img src="Classe UML.jpeg" alt="Diagrama de Classes">
 </p>
-
