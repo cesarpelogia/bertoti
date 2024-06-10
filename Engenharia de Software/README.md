@@ -246,7 +246,7 @@ Sistema escolhido: "Layered Architecture Style"
 ### Inicie seu diagrama de classes de uma das partes da arquitetura (escolha uma parte de backend por favor)
 
 <p align="center">
-  <img src="Classe UML.jpeg" alt="Diagrama de Classes">
+  <img src="src/mercearia/Classe UML.jpeg" alt="Diagrama de Classes">
 </p>
 
 # Atividade 8:
