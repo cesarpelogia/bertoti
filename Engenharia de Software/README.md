@@ -20,7 +20,7 @@ Engenharia de software é uma área da programação que atua no desenvolvimento
 
 ### PostgreSQL / MongoDB
 
-#### PostgreSQL:
+### PostgreSQL:
   - Menor flexibilidade de esquema:
 
   PostgreSQL é um banco de dados relacional, o que significa que ele segue um esquema fixo para tabelas. Isso pode ser uma limitação em aplicações que exigem uma estrutura de dados mais dinâmica.
@@ -33,7 +33,7 @@ Engenharia de software é uma área da programação que atua no desenvolvimento
 
   PostgreSQL tradicionalmente escala verticalmente, adicionando mais recursos ao servidor existente para melhorar o desempenho. Soluções de escalabilidade horizontal, como sharding, são possíveis mas mais complexas de implementar e gerenciar. A escalabilidade vertical é mais simples, mas tem limites físicos de melhoria.
 
-#### MongoDB
+### MongoDB
 
   - Maior flexibilidade de esquema:
 
@@ -51,7 +51,7 @@ Engenharia de software é uma área da programação que atua no desenvolvimento
 
 ## Java / Python
 
-#### Java
+### Java
 
 - Desempenho:
 
@@ -65,7 +65,7 @@ Java usa tipagem estática, o que significa que os tipos de variáveis são defi
 
 Java é amplamente utilizado em grandes sistemas de produção e é conhecido por sua capacidade de escalar bem, especialmente em aplicações corporativas e sistemas distribuídos.
 
-#### Python
+### Python
 
 - Produtividade:
 
@@ -81,19 +81,36 @@ Embora Python possa ser usado em sistemas escaláveis, geralmente requer otimiza
 
 -------------------------------------------------------
 
-Reaper / Pro Tools
+## Windows / Linux
 
-Reaper
-  - Licença Gratuita
-  - Plugins nativos de menor qualidade
-  - Baixo consumo de hardware
+### Windows
 
-Pro Tools
-  - Licença paga
-  - Plugins Nativos de maior qualidade
-  - Alto consumo de hardware
+- Compatibilidade de Software:
 
-------------------------------------------------------
+Windows possui ampla compatibilidade com uma grande variedade de software comercial e jogos. É a escolha preferida para ambientes empresariais e pessoais que dependem de aplicações proprietárias.
+
+- Facilidade de Uso:
+
+Windows oferece uma interface gráfica de usuário (GUI) amigável e consistente, facilitando a navegação e a utilização do sistema, especialmente para usuários menos experientes.
+
+- Custo:
+
+Windows é um sistema operacional pago, com custos de licença que podem ser significativos para empresas que precisam equipar muitos dispositivos.
+
+### Linux
+  - Personalização e Flexibilidade:
+
+Linux é altamente personalizável, permitindo aos usuários modificar praticamente qualquer aspecto do sistema. Existem muitas distribuições (distros) que atendem a diferentes necessidades, desde servidores de alta performance até desktops leves.
+
+- Segurança e Estabilidade:
+
+Linux é conhecido por sua segurança robusta e estabilidade. É amplamente utilizado em servidores e sistemas críticos devido à sua capacidade de funcionar por longos períodos sem falhas.
+
+- Custo:
+
+Linux é geralmente gratuito e de código aberto, eliminando os custos de licença e permitindo acesso completo ao código-fonte para modificações e otimizações.
+
+--------------------------------------------------
 
 # Atividade 3:
 
@@ -230,4 +247,12 @@ Sistema escolhido: "Layered Architecture Style"
 
 <p align="center">
   <img src="Classe UML.jpeg" alt="Diagrama de Classes">
+</p>
+
+# Atividade 8:
+
+## Diagrama de Casos de Uso.
+
+<p align="center">
+  <img src="Diagrama de Casos de Uso.jpg" alt="Diagrama de Casos de Uso">
 </p>
