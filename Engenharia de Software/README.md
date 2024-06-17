@@ -208,5 +208,5 @@ Sistema escolhido: "Layered Architecture Style"
 ## Diagrama de Casos de Uso.
 
 <p align="center">
-  <img src="Diagrama de Casos de Uso.jpg" alt="Diagrama de Casos de Uso">
+  <img src="Diagrama de caso de uso.png" alt="Diagrama de Casos de Uso">
 </p>
