@@ -18,97 +18,51 @@ Engenharia de software é uma área da programação que atua no desenvolvimento
 
 ## 3 Exemplos de Trade-offs de Software:
 
-### PostgreSQL / MongoDB
-
-### PostgreSQL:
-  - Menor flexibilidade de esquema:
-
-  PostgreSQL é um banco de dados relacional, o que significa que ele segue um esquema fixo para tabelas. Isso pode ser uma limitação em aplicações que exigem uma estrutura de dados mais dinâmica.
-
-  - Consultas SQL:
-
-  Oferece suporte completo a SQL, proporcionando consultas complexas e poderosas. Ideal para aplicações que necessitam de operações complexas de junção e transações.
-
-  - Escalabilidade de PostgreSQL:
-
-  PostgreSQL tradicionalmente escala verticalmente, adicionando mais recursos ao servidor existente para melhorar o desempenho. Soluções de escalabilidade horizontal, como sharding, são possíveis mas mais complexas de implementar e gerenciar. A escalabilidade vertical é mais simples, mas tem limites físicos de melhoria.
-
-### MongoDB
-
-  - Maior flexibilidade de esquema:
-
-  Como um banco de dados NoSQL, MongoDB permite a inserção de documentos sem um esquema fixo, oferecendo grande flexibilidade para armazenar dados de diferentes formatos.
-
-  - Consultas menos complexas:
-
-  As consultas em MongoDB, usando sua linguagem de consulta baseada em JSON, são geralmente menos complexas e mais fáceis de escrever para operações simples e diretas.
-
-  - Escalabilidade de MongoDB:
-
-  MongoDB é projetado para escalar horizontalmente de forma nativa, distribuindo dados e operações entre vários servidores (shards). Isso facilita a expansão à medida que o volume de dados cresce, tornando MongoDB ideal para aplicações que necessitam lidar com grandes quantidades de dados e altos níveis de tráfego.
+### 
 
 -----------------------------------------------------
 
-## Java / Python
+# Java / Python
 
-### Java
+### Sintaxe:
 
-- Desempenho:
+- Java:
 
-Java é uma linguagem compilada para bytecode que roda na Java Virtual Machine (JVM), proporcionando desempenho geralmente superior e mais consistente em comparação com linguagens interpretadas. Isso faz de Java uma boa escolha para aplicações de alta performance.
+Java é conhecido por sua sintaxe mais verbosa e estruturada. Cada declaração precisa ser explicitamente escrita, o que pode resultar em mais linhas de código para realizar a mesma tarefa que em Python.
 
-- Tipagem estática:
+- Python:
 
-Java usa tipagem estática, o que significa que os tipos de variáveis são definidos em tempo de compilação. Isso pode ajudar a evitar erros de tipo e tornar o código mais robusto, mas também pode tornar a escrita do código mais verbosa.
+Uma das características mais notáveis do Python é sua sintaxe simples e fácil de entender. Com uma sintaxe clara e legível, o Python permite que os programadores escrevam códigos de forma concisa e expressiva.
 
-- Escalabilidade:
+### Tipagem:
 
-Java é amplamente utilizado em grandes sistemas de produção e é conhecido por sua capacidade de escalar bem, especialmente em aplicações corporativas e sistemas distribuídos.
+- Java:
 
-### Python
+Java é uma linguagem de tipagem estática, o que significa que os tipos de todas as variáveis devem ser definidos em tempo de compilação. Isso ajuda a evitar erros de tipo antes de executar o código.
 
-- Produtividade:
+- Python:
 
-Python é uma linguagem interpretada com sintaxe simples e direta, o que aumenta a produtividade dos desenvolvedores. É ideal para desenvolvimento rápido de protótipos e scripts.
+Python é uma linguagem de tipagem dinâmica, o que significa que você não precisa declarar explicitamente o tipo de uma variável. O tipo é determinado em tempo de execução.
 
-- Tipagem dinâmica:
+### Desempenho:
 
-Python usa tipagem dinâmica, permitindo mais flexibilidade e simplicidade ao escrever código. No entanto, isso pode levar a erros de tipo que só são detectados em tempo de execução.
+- Java:
 
-- Escalabilidade:
+Java é uma linguagem compilada para bytecode (código intermediário gerado após a compilação do código-fonte Java) pela JVM (Java Virtual Machine), que utiliza a compilação Just-In-Time (JIT) para converter bytecode em código de máquina nativo durante a execução, permitindo otimização de tempo de compilação e melhor desempenho em comparação com linguagens interpretadas.Java também oferece suporte robusto para multithreading, aproveitando múltiplos núcleos de CPU de forma eficiente. No entanto, sua gestão de memória com coleta de lixo pode introduzir pausas na execução do programa.
 
-Embora Python possa ser usado em sistemas escaláveis, geralmente requer otimizações adicionais e o uso de bibliotecas externas para alcançar o desempenho e a escalabilidade que Java oferece nativamente. É mais comumente utilizado em soluções de back-end e microservices onde a escalabilidade pode ser gerenciada em partes menores do sistema.
+- Python:
+
+Python é uma linguagem interpretada com tipagem dinâmica, resultando em uma execução mais lenta. O Global Interpreter Lock (GIL) em CPython impede a execução simultânea de múltiplas threads, limitando o desempenho em aplicações multithreaded. Apesar disso, Python destaca-se pela sua sintaxe simples e a vasta gama de bibliotecas, facilitando o desenvolvimento rápido e a prototipagem.
 
 -------------------------------------------------------
 
 ## Windows / Linux
 
-### Windows
+### Segurança:
 
-- Compatibilidade de Software:
+- Windows:
 
-Windows possui ampla compatibilidade com uma grande variedade de software comercial e jogos. É a escolha preferida para ambientes empresariais e pessoais que dependem de aplicações proprietárias.
-
-- Facilidade de Uso:
-
-Windows oferece uma interface gráfica de usuário (GUI) amigável e consistente, facilitando a navegação e a utilização do sistema, especialmente para usuários menos experientes.
-
-- Custo:
-
-Windows é um sistema operacional pago, com custos de licença que podem ser significativos para empresas que precisam equipar muitos dispositivos.
-
-### Linux
-  - Personalização e Flexibilidade:
-
-Linux é altamente personalizável, permitindo aos usuários modificar praticamente qualquer aspecto do sistema. Existem muitas distribuições (distros) que atendem a diferentes necessidades, desde servidores de alta performance até desktops leves.
-
-- Segurança e Estabilidade:
-
-Linux é conhecido por sua segurança robusta e estabilidade. É amplamente utilizado em servidores e sistemas críticos devido à sua capacidade de funcionar por longos períodos sem falhas.
-
-- Custo:
-
-Linux é geralmente gratuito e de código aberto, eliminando os custos de licença e permitindo acesso completo ao código-fonte para modificações e otimizações.
+Windows é um alvo mais comum para ataques de malware e vírus devido à sua popularidade. 
 
 --------------------------------------------------
 
@@ -140,11 +94,11 @@ Slide:
 ### 25 - Estilo de Arquitetura de Pipeline
 
  - Positivo: Simplicidade
-   
+
   A arquitetura de pipeline é conhecida por sua simplicidade e clareza na organização do fluxo de dados. Cada etapa do pipeline tem uma função específica e bem definida, o que facilita o desenvolvimento e a manutenção do sistema. Essa modularidade permite que cada componente do pipeline seja desenvolvido, testado e depurado de maneira independente, simplificando o gerenciamento e a integração do sistema como um todo.
 
   Além disso, a natureza sequencial do pipeline torna mais fácil entender e seguir o fluxo de processamento dos dados.  Novos desenvolvedores podem rapidamente se familiarizar com o sistema, pois cada etapa é um bloco de construção lógico e isolado. Isso resulta em um ciclo de desenvolvimento mais ágil e uma curva de aprendizado menor.
-    
+
  - Negativo: Elasticidade
 
   Por outro lado, a arquitetura de pipeline pode enfrentar desafios em termos de elasticidade, especialmente quando há variações significativas na carga de trabalho. Cada estágio do pipeline pode se tornar um ponto de gargalo, e a necessidade de balancear a carga entre as etapas pode complicar a escalabilidade.
@@ -227,7 +181,7 @@ Slide:
 
   Além disso, implementar uma comunicação eficiente e segura entre microservices, lidar com falhas de rede, e garantir a observabilidade (monitoramento, logging, e tracing) são desafios significativos. A necessidade de ferramentas e práticas robustas para orquestração, como Kubernetes, bem como uma equipe com habilidades especializadas em sistemas distribuídos, pode aumentar a complexidade e os custos operacionais.
 
-  - Aplicação: 
+  - Aplicação:
   
   A arquitetura de microservices é ideal para uma plataforma de streaming, onde diferentes funcionalidades podem ser implementadas como serviços independentes, tais como: serviço de autenticação, serviço de catálogo de conteúdo, seriço de análise, entre outros.
 
