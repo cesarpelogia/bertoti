@@ -18,7 +18,36 @@ Engenharia de software é uma área da programação que atua no desenvolvimento
 
 ## 3 Exemplos de Trade-offs de Software:
 
-### 
+# PyCharm / VSCode
+
+### Versatilidade:
+
+- PyCharm:
+O PyCharm é uma IDE dedicada a linguagem Python, e por essa razão, oferece uma ampla gama de recurso específicos, o tornando mais atrativo para usuários dessa linguagem. Em contrapartida ela não oferece suporte para outras linguagens de forma nativa.
+
+- VSCode:
+A ampla gama de linguagens que a interface que a IDE reconhece de forma nativa e a ampla quantidade de extensões disponíveis no mercado, combinada com a facilidade de criação de extensões personalizadas, tornam o VSCode uma escolha flexível para projetos em diferentes linguagens.
+
+### Utilização:
+
+- PyCharm:
+Devivo ao fato do PyCharn ser um software que necessita de pagamento de licença, isso dificulta seu acesso. Essa questão impossibilita do software ser mais popular, porém o fato de existir uma empresa controlando, o suporte e a robustês da IDE ser maior.
+
+- VSCode:
+O VSCode é uma IDE de código aberto e por isso, gratúita. Esse fato aproxima usuários inciantes e estudantes, sendo a porta de entrada para muitos novos usuários. Soma-se a isso, a grande possibilidade de personização faz do VSCode uma opção mais atrativa para usuários exporádicos.
+
+### Consumo de memória:
+
+- PyCharm:
+
+PyCharm, uma IDE robusta para Python, consome muita memória devido a funcionalidades avançadas como análise de código e autocompletar. Isso pode afetar o desempenho do sistema, especialmente em máquinas com recursos limitados.
+
+- VSCode:
+
+VS Code é uma IDE leve e eficiente, mas seu consumo de memória pode aumentar ao usar extensões e funcionalidades avançadas. Embora geralmente consuma menos memória que IDEs mais robustas, o uso intensivo de plugins e a execução de várias tarefas podem impactar o desempenho em sistemas com recursos limitados.
+
+
+
 
 -----------------------------------------------------
 
@@ -48,11 +77,12 @@ Python é uma linguagem de tipagem dinâmica, o que significa que você não pre
 
 - Java:
 
-Java é uma linguagem compilada para bytecode (código intermediário gerado após a compilação do código-fonte Java) pela JVM (Java Virtual Machine), que utiliza a compilação Just-In-Time (JIT) para converter bytecode em código de máquina nativo durante a execução, permitindo otimização de tempo de compilação e melhor desempenho em comparação com linguagens interpretadas.Java também oferece suporte robusto para multithreading, aproveitando múltiplos núcleos de CPU de forma eficiente. No entanto, sua gestão de memória com coleta de lixo pode introduzir pausas na execução do programa.
+Java é uma linguagem compilada para bytecode (código intermediário gerado após a compilação do código-fonte Java) pela JVM (Java Virtual Machine), que utiliza a compilação Just-In-Time (JIT) para converter bytecode em código de máquina nativo durante a execução, permitindo otimização de tempo de compilação e melhor desempenho em comparação com linguagens interpretadas.Java também oferece suporte robusto para multithreading, aproveitando múltiplos núcleos de CPU de forma eficiente.
 
 - Python:
 
-Python é uma linguagem interpretada com tipagem dinâmica, resultando em uma execução mais lenta. O Global Interpreter Lock (GIL) em CPython impede a execução simultânea de múltiplas threads, limitando o desempenho em aplicações multithreaded. Apesar disso, Python destaca-se pela sua sintaxe simples e a vasta gama de bibliotecas, facilitando o desenvolvimento rápido e a prototipagem.
+Python é uma linguagem interpretada com tipagem dinâmica, resultando em uma execução mais lenta. O Global Interpreter Lock (GIL) em CPython impede a execução simultânea de múltiplas threads, limitando o desempenho em aplicações multithreaded. 
+
 
 -------------------------------------------------------
 
@@ -62,7 +92,31 @@ Python é uma linguagem interpretada com tipagem dinâmica, resultando em uma ex
 
 - Windows:
 
-Windows é um alvo mais comum para ataques de malware e vírus devido à sua popularidade. 
+Windows é um alvo mais comum para ataques de malware e vírus devido à sua popularidade. Um fato que potencializa essa vunerabilidade são as atualizações de segurança da Microsoft, que por vezes, são menos eficientes que as fornecidas pelas concorrentes.
+
+- Linux
+
+O fato de sistemas operacionais com kernel linux serem mais complexos para serem invadidos é sua alta possibilidade de personalização, além do fato de receber atualizações de segurança com maior frequência em relação ao windows.
+
+### Utilização:
+
+- Windows
+
+Apesar de ser pago, o Windows é o sistema opreacional mais popular do mercado. Devido a esse fato, a maioria das pessoas que tem acesso a um computador, provavelmente teve contato com um sistema operacional Windows, da Microsoft. Essa popuplaridade também corrobora para a maior dispinibilidade de softwares, o tornando uma excelente escolha para empresas que precisam de computadores para diversas funções e que tem a possibilidade de funcionários com menor conhecimento de informática. 
+
+- Linux
+
+Sistemas operacionais que utilizam um kernel linux são de código aberto, ou seja, não necessitam de pagamento. Porém, isso não é suficiente para que seu alcance se iguale ao concorrente da Microsoft. Embora menos popular, esse sistema operacional é altamente usado por empresas em servidores, devido a sua ampla capacidade de personalização.
+
+### Suporte
+
+- Windows
+
+Devido ao fato da empresa dona do Windows ser a lider de mercado, seu suporte é bem extruturado e possui grande suporte direto, fornecido pela propria empresa, ou indireto, fornecido por técnicos independentes. O suporte da empresa é feito por especialistas com grande experiência e acesso a muitos recursos.
+
+- Linux
+
+Sistemas operacionais de código aberto como o linux não possuem uma empresa por trás, que tenha uma gama de recursos para prover ao usuário. Apesar da grande comunidade de usuários que alimentam a internet com informações, a quantidade de mão de obra é inferior e nem sempre tão especilazada como da Microsoft.
 
 --------------------------------------------------
 
