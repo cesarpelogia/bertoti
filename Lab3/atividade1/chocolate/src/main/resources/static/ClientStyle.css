@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0C1A30, #1B395B);
+    color: #FFFFFF;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #0C1A30; /* Azul Escuro */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 28px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #00A3E0;
+    font-size: 18px;
+}
+
+form {
+    background-color: #1B395B;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
+    color: #FFFFFF;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permitir que os itens se ajustem em várias linhas */
+}
+
+.form-column {
+    flex: 1;
+    margin: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #0C1A30;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00A3E0;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #1B395B;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    .form-container {
+        display: flex;
+        flex-direction: column; /* Exibir os itens em coluna */
+    }
+
+    .form-column {
+        width: 100%; /* Largura total para cada coluna */
+        margin: 0 0 20px 0; /* Margem inferior para espaçamento */
+    }
+
+    .form-column:nth-child(1) { order: 1; }
+    .form-column:nth-child(2) { order: 2; }
+    .form-column:nth-child(3) { order: 3; }
+    .form-column:nth-child(4) { order: 4; }
+    .form-column:nth-child(5) { order: 5; }
+    .form-column:nth-child(6) { order: 6; }
+    .form-column:nth-child(7) { order: 7; }
+    .form-column:nth-child(8) { order: 8; }
+    .form-column:nth-child(9) { order: 9; }
+    .form-column:nth-child(10) { order: 10; }
+    .form-column:nth-child(11) { order: 11; }
+    .form-column:nth-child(12) { order: 12; }
+    .form-column:nth-child(13) { order: 13; }
+    .form-column:nth-child(14) { order: 14; }
+    .form-column:nth-child(15) { order: 15; }
+    .form-column:nth-child(16) { order: 16; }
+
+    input[type="text"],
+    input[type="email"],
+    select {
+        width: calc(100% - 20px); /* Ajustar a largura para caber na tela com margem */
+        margin: 0 auto 10px auto; /* Centralizar os campos */
+    }
+}
