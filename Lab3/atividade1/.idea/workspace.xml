@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="359e4dd9-7ebe-4ac1-be3a-21d9282e0550" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/chocolate/src/main/java/com/wonka/chocolate/ChocolateApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chocolate/src/main/java/com/wonka/chocolate/controller/ChocolateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chocolate/src/main/java/com/wonka/chocolate/domain/ChocolateDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chocolate/src/main/java/com/wonka/chocolate/repository/ChocolateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chocolate/src/main/java/com/wonka/chocolate/service/ChocolateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chocolate/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolate/src/main/java/com/oversonic/client/ClientApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolate/src/main/java/com/oversonic/client/controller/ClientController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolate/src/main/java/com/oversonic/client/domain/ClientDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolate/src/main/java/com/oversonic/client/repository/ClientRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolate/src/main/java/com/oversonic/client/service/ClientService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolate/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chocolate/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolate/src/main/resources/static/ClientScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/chocolate/src/main/resources/static/ClientScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolate/src/test/java/com/oversonic/client/ClientApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../test-lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../Engenharia de Software/test-lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../test-lib/junit-4.13.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../Engenharia de Software/test-lib/junit-4.13.2.jar" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chocolate" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2kwbbD27OWzZ3QgZZdbF8aiyR13" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Desenvolvimento",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pelog/Documents/FATEC/Lab 3/bertoti/Lab 3/atividade1",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="359e4dd9-7ebe-4ac1-be3a-21d9282e0550" name="Changes" comment="" />
+      <created>1724197655814</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724197655814</updated>
+    </task>
+    <servers />
+  </component>
+</project>
