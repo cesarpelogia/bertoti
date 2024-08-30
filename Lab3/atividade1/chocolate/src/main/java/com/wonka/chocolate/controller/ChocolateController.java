@@ -2,7 +2,6 @@ package com.wonka.chocolate.controller;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wonka.chocolate.domain.ChocolateDTO;
-// import com.wonka.chocolate.service.ChocolateService;
+
 
 @RestController
 @RequestMapping("/chocolate")
@@ -36,28 +35,39 @@ public class ChocolateController {
         return chocolates;
     }
     
-    @PostMapping
-    ChocolateDTO postChocolate(@RequestBody ChocolateDTO chocolateDTO) {
-        chocolates.add(chocolateDTO);
-        return chocolateDTO;
-    }
-    @PutMapping("/{id}")
-    public ResponseEntity<ChocolateDTO> putChocolate(@PathVariable Long id, @RequestBody ChocolateDTO chocolate) {
-        Optional<ChocolateDTO> existingChocolate = chocolates.stream()
-            .filter(c -> c.getId().equals(id))
-            .findFirst();
-    
-        if (existingChocolate.isPresent()) {
-            int chocolateIndex = chocolates.indexOf(existingChocolate.get());
-            chocolates.set(chocolateIndex, chocolate);
-            return ResponseEntity.ok(chocolate);
-        } else {
-            return new ResponseEntity<>(postChocolate(chocolate), HttpStatus.CREATED);
+    @GetMapping("/{id}")
+    ResponseEntity<ChocolateDTO> getChocolateByID(@PathVariable Long id) {
+        for (ChocolateDTO c : chocolates){
+            if (id.equals(c.getId()))
+                return ResponseEntity.ok(c);
         }
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+
+    @PostMapping
+    ResponseEntity<ChocolateDTO> postChocolate(@RequestBody ChocolateDTO chocolateDTO) {
+        chocolates.add(chocolateDTO);
+        return ResponseEntity.status(HttpStatus.CREATED).body(chocolateDTO);
     }
+
+    @PutMapping("/{id}")
+    ResponseEntity<ChocolateDTO> putChocolate(@PathVariable String id, @RequestBody ChocolateDTO chocolate) {
+            int chocolateIndex = -1;                for (ChocolateDTO c: chocolates) {
+                if (c.getId().equals(id)) {
+                    chocolateIndex = chocolates.indexOf(c);
+                    chocolates.set(chocolateIndex, chocolate);
+                }
+            }
     
+            return (chocolateIndex == -1) ?
+                ResponseEntity.status(HttpStatus.CREATED).body(chocolate) :
+                ResponseEntity.ok(chocolate);
+        }
+
+
+
     @DeleteMapping("/{id}")
-    void deleteChocolate(@PathVariable long id) {
+    void deleteChocolate(@PathVariable Long id) {
         chocolates.removeIf(c -> c.getId() == id);
     }
 }
