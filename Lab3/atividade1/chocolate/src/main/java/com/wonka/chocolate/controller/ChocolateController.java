@@ -21,8 +21,7 @@ import com.wonka.chocolate.domain.ChocolateDTO;
 @RequestMapping("/chocolate")
 public class ChocolateController {
     public List<ChocolateDTO> chocolates = new ArrayList<>();
-    // @Autowired
-    // private ChocolateService chocolateService;
+    
     public ChocolateController (){
         chocolates.addAll(List.of(
                 new ChocolateDTO("Choquito","Nestlé",0.2, 5.50),
@@ -42,29 +41,30 @@ public class ChocolateController {
                 return ResponseEntity.ok(c);
         }
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-        }
+    }
 
     @PostMapping
     ResponseEntity<ChocolateDTO> postChocolate(@RequestBody ChocolateDTO chocolateDTO) {
+        long idEncontrado = chocolateDTO.getMaiorId(chocolates);
+        chocolateDTO.setId(idEncontrado);
         chocolates.add(chocolateDTO);
+
         return ResponseEntity.status(HttpStatus.CREATED).body(chocolateDTO);
     }
 
     @PutMapping("/{id}")
-    ResponseEntity<ChocolateDTO> putChocolate(@PathVariable String id, @RequestBody ChocolateDTO chocolate) {
-            int chocolateIndex = -1;                for (ChocolateDTO c: chocolates) {
+    ResponseEntity<ChocolateDTO> putChocolate(@PathVariable Long id, @RequestBody ChocolateDTO chocolate) {
+            int chocolateIndex = 0;
+            for (ChocolateDTO c : chocolates) {
                 if (c.getId().equals(id)) {
                     chocolateIndex = chocolates.indexOf(c);
                     chocolates.set(chocolateIndex, chocolate);
                 }
             }
-    
-            return (chocolateIndex == -1) ?
+            return (chocolateIndex == 0) ?
                 ResponseEntity.status(HttpStatus.CREATED).body(chocolate) :
                 ResponseEntity.ok(chocolate);
-        }
-
-
+    }
 
     @DeleteMapping("/{id}")
     void deleteChocolate(@PathVariable Long id) {

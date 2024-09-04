@@ -1,5 +1,6 @@
 package com.wonka.chocolate.domain;
 
+import java.util.List;
 
 public class ChocolateDTO {
     
@@ -11,6 +12,10 @@ public class ChocolateDTO {
     private double preco;
     private double peso;
 
+    public ChocolateDTO(){
+
+    }
+
     public ChocolateDTO(String nome, String marca, double preco, double peso) {
         this.id = nextId++;
         this.nome = nome;
@@ -19,6 +24,16 @@ public class ChocolateDTO {
         this.peso = peso;
     }
 
+    public long getMaiorId(List<ChocolateDTO> chocolates){
+        long id = 1;
+        for (ChocolateDTO c : chocolates){
+            if (c.getId().equals(id)){
+                id++;
+            }
+        }
+        return id;
+
+    }
     // Getters e Setters
     public Long getId() {
         return id;
